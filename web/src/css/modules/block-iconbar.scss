@@ -21,6 +21,6 @@
     text-align: center;
 
     figcaption {
-        padding: ($rhythm / 2) 0 $rhythm / 2; /* #HACK: Provide more breathing room */
+        padding: ($rhythm / 2) ($rhythm / 2) $rhythm / 2; /* #HACK: Provide more breathing room */
     }
 }
