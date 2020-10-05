@@ -9,8 +9,12 @@
 
 .key-facts {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: center;
+
+    @include for-size('tablet') {
+        justify-content: space-between;
+    }
 }
 
 .fact {

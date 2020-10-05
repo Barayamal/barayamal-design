@@ -9,10 +9,18 @@
 
 .icon-bar {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: center;
+
+    @include for-size('tablet') {
+        justify-content: space-between;
+    }
 }
 
 .icon {
-	display: flex;
+    text-align: center;
+
+    figcaption {
+        padding: ($rhythm / 2) 0 $rhythm / 2; /* #HACK: Provide more breathing room */
+    }
 }
