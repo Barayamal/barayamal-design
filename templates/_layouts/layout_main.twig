@@ -14,7 +14,7 @@
             <div class="header__logo">
                 <a href="{{ siteUrl }}">
                     {% if craft.app.request.absoluteUrl == siteUrl %}
-                        <h1 class="sr-only">Barayamal</h1>
+                        <h1 class="sr-only">{{ currentSite.name }}</h1>
                     {% endif %}
 
                     <img class="logo-img" src="/dist/img/barayamal-logo.svg" alt="Barayamal Logo">

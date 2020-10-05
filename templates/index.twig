@@ -1,47 +1,66 @@
 {% import '_includes/_macros' as siteMacros %}
-{% extends '_layouts/layout_default' %}
+{% extends '_layouts/layout_promo' %}
 
 {% block content %}
 
-    {# include '_modules/banner.twig' with {
-        banner_type: 'slider'
-    } #}
+    {% include '_modules/banner.twig' with {
+        banner_type: 'promo-site'
+    } %}
+
+    <section class="module bg--slate">
+        <h2 class="sr-only">Key Facts</h2>
+
+        <div class="wrapper">
+            <div class="key-facts">
+                {% for i in 0..2 %}
+                    <figure class="fact">
+                        <div class="fact__number">
+                            <span class="t-xxl">7</span>
+                        </div>
+
+                        <div class="fact__details">
+                            <h3 class="t-md">Really Important Text</h3>
+                            <span class="t-nm t-sea">Not so important text</span>
+                        </div>
+                    </figure>
+                {% endfor %}
+            </div>
+        </div>
+
+        {{ siteMacros.css('css/modules/block-keyfacts.css') }}
+    </section>
+
+    <section class="module">
+        <div class="wrapper">
+            <div class="page-container">
+                <h2 class="t-xl">Lorem ipsum dolor sit amet.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                <a class="btn btn--round btn--sea" href="#">Register Today</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="module bg--sea">
+        <div class="wrapper">
+            <div class="icon-bar">
+                {% for i in 0..2 %}
+                    <figure class="icon">
+                        <img src="#" alt="">
+
+                        <figcaption class="t-sm t-700">Extensive Networking Opportunities</figcaption>
+                    </figure>
+                {% endfor %}
+            </div>
+        </div>
+
+        {{ siteMacros.css('css/modules/block-iconbar.css') }}
+    </section>
 
     <section class="module bg--grey">
         <div class="wrapper">
-            <h2 class="t-xl t-centre">Take the next step.</h2>
-
-            <div class="promo">
-                {% for i in 0..1 %}
-                    <div class="promo__block">
-                        <figure class="latest-item">
-                            <div class="latest-item__title">
-                                <a href="#">
-                                    {% include '_includes/srcset.twig' with {
-                                        image_url: 'https://picsum.photos/1920/1080',
-                                        image_alt: 'Hello World'
-                                    } %}
-
-                                    <h3 class="item-title">Pre-Accelerator</h3>
-                                </a>
-
-                                <span class="category category--ochre t-sm">Upcoming Program</span>
-                            </div>
-
-                            <figcaption class="latest-item__desc">
-                                <p class="t-nm">{{ 'The Barayamal Pre-Accelerator is for Indigenous Australians in Victoria, which will provide training and mentoring to kick-start your entrepreneurial journey. Apply Now Is this program for you?' | chop(limit=180, unit='c', append=' ...') }}</p>
-                            </figcaption>
-                        </figure>
-
-                        <a class="btn btn--icon" href="#">
-                            <span class="text">All Programs</span>
-                            <svg class="gly">
-                                <use xlink:href="/dist/img/glyphs.svg#arrows"/>
-                            </svg>
-                        </a>
-                    </div>
-                {% endfor %}
-            </div>
+            <h2 class="t-xl">World class speakers</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
     </section>
 

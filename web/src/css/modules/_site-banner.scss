@@ -92,3 +92,38 @@ $mask-types: 'page','post','archive','carousel';
         max-width: 70%;
     }
 }
+
+/* Promo Banner */
+.banner--promo {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 500px;
+
+    img,
+    video {
+        object-fit: cover;
+        object-position: center;
+        filter: brightness(0.40);
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.banner--promo__media {
+    flex: none;
+    width: 100%;
+}
+
+.banner--promo__text {
+    position: absolute;
+    color: var(--site__bg-color);
+    z-index: 555;
+    width: 100%;
+    bottom: 10%;
+    text-align: center;
+
+    @include for-size('tablet') {
+        text-align: left;
+    }
+}

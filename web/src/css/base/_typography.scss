@@ -48,6 +48,7 @@ h1, h2, h3, h4, h5, h6, p {
 .t-700         { font-weight: 700; font-variation-settings: 'wght' 700; }
 .t-ul          { border-bottom: 1px solid site-color('ash'); }
 .t-centre      { text-align: center; }
+.t-sea         { color: site-color('sea'); }
 small,  .t-sm  { @include type-setting('sm'); }
 p,      .t-nm  { @include type-setting('nm'); }
 h4,     .t-md  { @include type-setting('md'); }

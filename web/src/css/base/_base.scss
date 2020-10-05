@@ -9,10 +9,6 @@
     --site__outline: #{site-color('black')} dotted medium;
 }
 
-/*@media (prefers-color-scheme: dark) {
-  TO BE BUILT.
-}*/
-
 ::selection {
     @extend %nicer-highlight;
     color: site-color('white');
@@ -67,6 +63,16 @@ body {
 
 .bg--grey {
     background-color: site-color('grey');
+}
+
+.bg--slate {
+    background-color: site-color('slate');
+    color: site-color('white');
+}
+
+.bg--sea {
+    background-color: site-color('sea');
+    color: site-color('white');
 }
 
 .gly {

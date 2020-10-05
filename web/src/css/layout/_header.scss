@@ -39,6 +39,11 @@
     }
 }
 
+/* For promo layout and other similar templates, pushes nav to center */
+.no-top-links {
+    align-self: center;
+}
+
 .social {
     @include reset-list;
 }

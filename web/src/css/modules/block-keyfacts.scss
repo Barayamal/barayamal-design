@@ -1,0 +1,28 @@
+@import '../utils/variables',
+        '../utils/mixins',
+        '../utils/resets',
+        '../utils/placeholders';
+
+/*------------------------------------*\
+  # KEY FACTS
+\*------------------------------------*/
+
+.key-facts {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.fact {
+    display: flex;
+    align-items: center; /* Align with large number */
+    padding-bottom: $rhythm / 2; /* #HACK: Provide more breathing room */
+}
+
+.fact__details {
+    padding-left: $rhythm / 2;
+
+    h3 {
+        margin-bottom: 0; /* Override global vertical rhythm */
+    }
+}

@@ -56,5 +56,23 @@
             {% endfor %}
         </section>
 
+    {% elseif banner_type == 'promo-site' %}
+
+        <section class="banner banner--promo">
+            <div class="banner--promo__media">
+                {% include '_includes/srcset.twig' with {
+                    image_url: '/test/demo-day-2019.png',
+                    image_alt: 'Demo Day 2019',
+                    loading: 'eager'
+                } %}
+            </div>
+
+            <div class="banner--promo__text">
+                <div class="wrapper">
+                    <h1 class="t-xxl">Lorem ipsum dolor sit amet.</h1>
+                    <p class="t-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                </div>
+            </div>
+        </section>
 
     {% endif %}

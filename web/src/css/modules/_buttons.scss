@@ -57,3 +57,14 @@
         color: site-color('white');
     }
 }
+
+.btn--sea {
+    background-color: site-color('sea');
+    color: site-color('white');
+
+    &:hover,
+    &:active {
+        background-color: site-color('earth');
+        color: site-color('black');
+    }
+}

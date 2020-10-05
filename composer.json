@@ -18,6 +18,7 @@
     "require": {
         "clubstudioltd/craft-asset-rev": "6.0.2",
         "craftcms/cms": "^3.5.10",
+        "craftcms/mailgun": "1.4.3",
         "topshelfcraft/wordsmith": "3.3.0.1",
         "vlucas/phpdotenv": "^3.4.0"
     },

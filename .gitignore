@@ -10,7 +10,7 @@ config/license.key
 # Build Tools
 /node_modules
 /web/dist
-/test
+/web/test
 
 # Local by Flywheel
 /sql
