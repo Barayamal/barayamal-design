@@ -4,6 +4,32 @@ fieldLayouts:
       -
         elements:
           -
+            style: warning
+            tip: 'Only include code that you trust and can verify its authenticity.'
+            type: craft\fieldlayoutelements\Tip
+          -
+            fieldUid: 6b6cd2e0-2609-41d4-bd30-4c4ee3bfb8e1
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: a3636ab0-eb95-41bb-9934-7e5ca65251cf
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Analytics and Marketing'
+        sortOrder: 1
+      -
+        elements:
+          -
             fieldUid: cfff6d93-71ae-4b51-acc2-6c14fb06bbe7
             instructions: null
             label: null
@@ -58,6 +84,6 @@ fieldLayouts:
             warning: null
             width: 100
         name: 'Site Footer'
-        sortOrder: 1
+        sortOrder: 2
 handle: siteSettings
 name: 'Site Settings'

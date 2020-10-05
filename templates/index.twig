@@ -46,7 +46,7 @@
             <div class="icon-bar">
                 {% for i in 0..2 %}
                     <figure class="icon">
-                        <img src="/test/icon.svg" alt="Icon Name">
+                        <img src="/test/icon.svg" alt="Icon Name" loading="lazy">
 
                         <figcaption class="t-nm t-700">Extensive Networking Opportunities</figcaption>
                     </figure>
@@ -62,6 +62,54 @@
             <h2 class="t-xl">World class speakers</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
+    </section>
+
+    <section class="module">
+        <div class="wrapper">
+            <h2 class="t-xl">Agenda</h2>
+
+            <article class="agenda">
+                <div class="agenda__button-group">
+                    <button class="btn btn--sea btn--boxy btn--sea__active">Day 1</button>
+                    <button class="btn btn--sea btn--boxy">Day 2</button>
+                    <button class="btn btn--sea btn--boxy">Day 3</button>
+                </div>
+
+                <div class="agenda__content">
+                    <div class="agenda-item" itemscope itemtype="https://schema.org/subEvent">
+                        <span class="time t-sea">
+                            <svg class="gly">
+                                <use xlink:href="/dist/img/glyphs.svg#clock"/>
+                            </svg>
+
+                            <time datetime="" itemprop="startDate">9:30</time> - <time datetime="" itemprop="endDate">10:00</time>
+                        </span>
+
+                        <h3 class="t-lg" itemprop="name">Welcome to Country</h3>
+                        <p itemprop="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        {{ siteMacros.css('css/modules/block-agenda.css') }}
+    </section>
+
+    <section class="module">
+        <div class="wrapper">
+            <a href="{{ networkSettings.instagramProfile }}">Follow @Barayamal3 on Instagram</a> / 
+            <a href="https://curator.io" target="_blank" class="crt-logo crt-tag" rel="noopener">Powered by Curator.io</a>
+        </div>
+
+        <div id="curator-feed-default"></div>
+
+        <script>
+            (function(){
+            var i, e, d = document, s = "script";i = d.createElement("script");i.async = 1;
+            i.src = "https://cdn.curator.io/published/d9838a23-d082-49b4-a329-3c4f3d01.js";
+            e = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
+            })();
+        </script>
     </section>
 
 {% endblock %}

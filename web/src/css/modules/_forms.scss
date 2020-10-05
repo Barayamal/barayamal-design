@@ -10,4 +10,8 @@
     background-color: site-color('grey');
     color: site-color('black');
     font-size: 1rem;
+
+    @include for-size('tablet') {
+       width: 300px;
+    }
 }

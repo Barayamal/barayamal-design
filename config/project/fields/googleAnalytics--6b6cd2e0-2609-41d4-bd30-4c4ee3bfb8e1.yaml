@@ -1,0 +1,18 @@
+contentColumnType: string(44)
+fieldGroup: f236671b-2123-4941-a279-c5f723c68bfa
+handle: googleAnalytics
+instructions: ''
+name: 'Google Analytics'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 11
+  code: '1'
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: UA-000000-2
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

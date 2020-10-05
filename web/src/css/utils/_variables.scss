@@ -50,13 +50,14 @@ $breakpoints: (
 
 // COLOR // 
 $site-colors: (
-    'black':     hsl(0, 0%, 13%),
-    'white':     hsl(0, 0%, 100%),
-    'ochre':     hsl(15, 67%, 48%),
-    'earth':     hsl(34, 87%, 53%),
-    'sea':       hsl(197, 100%, 41%),
-    'slate':     hsl(0, 0%, 27%),
-    'ash':       hsl(180, 0%, 40%),
-    'aubergine': hsl(344, 26%, 28%),
-    'grey':      hsl(180, 7%, 97%)
+    'black':       hsl(0, 0%, 13%),
+    'white':       hsl(0, 0%, 100%),
+    'ochre':       hsl(15, 67%, 48%),
+    'earth':       hsl(34, 87%, 53%),
+    'sea':         hsl(197, 100%, 41%),
+    'sea-active':  hsl(198, 73%, 60%),
+    'slate':       hsl(0, 0%, 27%),
+    'ash':         hsl(180, 0%, 40%),
+    'aubergine':   hsl(344, 26%, 28%),
+    'grey':        hsl(180, 7%, 97%)
 );

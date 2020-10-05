@@ -21,6 +21,10 @@
     }
 }
 
+.btn--boxy {
+    padding: ($rhythm / 2) $rhythm;
+}
+
 .btn--icon {
     display: flex;
     align-items: center;
@@ -67,4 +71,8 @@
         background-color: site-color('earth');
         color: site-color('black');
     }
+}
+
+.btn--sea__active {
+    background-color: site-color('sea-active');
 }

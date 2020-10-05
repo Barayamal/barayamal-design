@@ -1,0 +1,29 @@
+@import '../utils/variables',
+        '../utils/mixins',
+        '../utils/resets',
+        '../utils/placeholders';
+
+/*------------------------------------*\
+  # AGENDA
+\*------------------------------------*/
+
+.agenda__content {
+    margin: $rhythm 0 0 0; /* bit of breathing room for buttons above */
+    padding: $rhythm;
+    border: 1px solid site-color('sea');
+
+    h3 {
+        margin-bottom: $rhythm / 2; /* override vertical rhythm */
+    }
+}
+
+.agenda-item {
+    .gly {
+        padding-right: 5px;
+    }
+
+    .time {
+        display: flex;
+        align-items: center;
+    }
+}
