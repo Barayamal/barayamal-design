@@ -1,0 +1,25 @@
+{% import '_includes/_macros' as siteMacros %}
+
+{# Video Module #}
+<section class="module bg--grey" data-module="video">
+    <div class="wrapper">
+        <div class="launch-player" itemprop="video" itemscope itemtype="https://schema.org/VideoObject">
+            <h2 class="sr-only" itemprop="name">{{ block.videoName }}</h2>
+            
+            {% for image in block.backgroundImage.all() %}
+                {% include '_includes/srcset.twig' with {
+                    image_url: image.url,
+                    image_alt: image.title,
+                } %}
+            {% endfor %}
+
+            <a class="play-media" href="https://www.youtube-nocookie.com/embed/{{ block.youtubeUrl | youtubeId }}" itemprop="contentUrl">
+                <svg class="gly">
+                    <use xlink:href="/dist/img/glyphs.svg#play"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    {{ siteMacros.css('css/modules/block-video.css') }}
+</section>

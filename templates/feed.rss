@@ -1,0 +1,36 @@
+{% set title = siteName %}
+{% set channelDescription = 'description' %}
+{% set descriptionHandle = 'intro' %}
+{% set items = craft.entries.section('podcast').limit(50) %}
+{# feed #}
+{% if craft.app.request.segments|last == _self %}
+
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>{{ title }}</title>
+        <link>{{ siteUrl }}</link>
+        <atom:link href="{{ craft.app.request.absoluteUrl }}" rel="self" type="application/rss+xml" />
+        {% if channelDescription is defined %}<description>{{ channelDescription }}</description>{% endif %}
+        <language>{{ currentSite.language }}</language>
+        <pubDate>{{ now|rss }}</pubDate>
+        <lastBuildDate>{{ now|rss }}</lastBuildDate>
+
+        {% for item in items.all() %}
+            <item>
+                <title>{{ item.title }}</title>
+                <link>{{ item.url }}</link>
+                <pubDate>{{ item.postDate|rss }}</pubDate>
+                <author>{{ item.author.email }} ({{ item.author }})</author>
+                <guid>{{ item.url }}</guid>
+                {% if item[descriptionHandle] is defined %}<description><![CDATA[
+                    {{ item[descriptionHandle] }}
+                ]]></description>{% endif %}
+            </item>
+        {% endfor %}
+    </channel>
+</rss>
+
+{% else %}
+    <link rel="alternate" type="application/rss+xml" href="{{ url(_self) }}">
+{% endif %}

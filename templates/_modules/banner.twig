@@ -1,0 +1,60 @@
+{# Banner Module #}
+
+    {% if banner_type == 'page' or banner_type == 'post' %}
+
+        <div class="banner banner--{{ banner_type }}">
+            {% for image in entry.featuredImage.all() %}
+                {% include '_includes/srcset.twig' with {
+                    image_class: 'banner-img',
+                    image_url: image.url,
+                    image_alt: image.title,
+                    loading: 'eager'
+                } %}
+            {% endfor %}
+
+            <div class="banner__text">
+                <div class="wrapper">
+                    <h1 class="t-xxl">{{ entry.title }}</h1>
+
+                    {% if banner_type == 'post' %}
+                        <span class="t-nm">by {{ entry.author.fullName }}, 
+                        <time datetime="{{ entry.postDate | date("Y-m-d") }}" itemprop="datePublished">{{ entry.postDate| date("F j, Y") }}</time></span>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+    {% elseif banner_type == 'archive' %}
+
+        
+
+    {% elseif banner_type == 'slider' %}
+
+        <section class="banner banner--carousel" data-module="carousel">
+            {% for block in entry.homepageCarousel.all() %}
+                {% if block.type == 'Slide' %}
+                    <div class="banner__slide">
+                        {% for image in block.backgroundImage.all() %}
+                            {% include '_includes/srcset.twig' with {
+                                image_class: 'slide-img',
+                                image_url: image.url,
+                                image_alt: image.title,
+                                loading: 'eager'
+                            } %}
+                        {% endfor %}
+
+                        <div class="slide-text">
+                            <div class="wrapper">
+                                <div class="text-contain">
+                                    <h2 class="t-xxl">{{ block.slideHeading | typogrify }}</h2>
+                                    <a class="btn btn--round btn--ochre" href="{{ block.buttonUrl }}">{{ block.buttonText }}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </section>
+
+
+    {% endif %}

@@ -1,0 +1,22 @@
+{% extends '_layouts/amp' %}
+
+{% block layout %}
+
+    <header>
+        <div class="wrapper">
+            <h1>TO BE BUILT.</h1>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}
+            <p><code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> is not set.</p>
+            <p>More information on Twig's <a href="https://symfony.com/doc/3.4/templating/inheritance.html">docs</a>.</p>
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>This is the page footer.</p>
+    </footer>
+
+{% endblock layout %}

@@ -1,0 +1,129 @@
+fieldLayouts:
+  dbcd35ad-8282-4373-b61c-f8ad6647a712:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: f367a6eb-b83f-4558-95b0-5a63f7d49192
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Indigipreneur Podcast'
+        sortOrder: 1
+      -
+        elements:
+          -
+            style: tip
+            tip: 'Use full URL (including https://) to make sure the links work properly.'
+            type: craft\fieldlayoutelements\Tip
+          -
+            fieldUid: b72ed295-f3d3-4a31-9f4b-f6ae68f6e02e
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 68f6a8f9-ff42-4518-8748-7fdf5ae67648
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 041037a4-9d5e-4c38-8da1-2ecac96dd9d8
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 46491d9e-55d5-486b-9e4c-8074d76b0534
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: b8ca26c6-9821-4cfd-8d6e-0f3df5018c9a
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Social Networks'
+        sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: cfff6d93-71ae-4b51-acc2-6c14fb06bbe7
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 83a2b2e6-9a66-46f7-8d52-c482370f2656
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 4970effa-4ae5-4717-a86d-93b69b523282
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 86e6183e-e42e-4832-93d5-299ea3b128e4
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 4de79e50-57d4-4e97-9001-513bc1932bca
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: f11dce3a-f83a-4a65-9f71-c705d44adef4
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Site Footer'
+        sortOrder: 3
+handle: siteSettings
+name: 'Site Settings'

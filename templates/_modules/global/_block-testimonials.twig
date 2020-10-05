@@ -1,0 +1,26 @@
+{% import '_includes/_macros' as siteMacros %}
+
+{# Testimonials Module #}
+<section class="module bg--grey" data-module="testimonials">
+    {% if block.moduleHeader %}
+        <h2 class="t-xl t-centre">{{ block.moduleHeader }}</h2>
+    {% endif %}
+
+    <div class="testimonials">
+        {% for block in block.testimonial.all() %}
+            <blockquote class="testimonial-entry t-centre" itemprop="review" itemscope itemtype="https://schema.org/Review">
+                <p itemprop="reviewBody">{{ block.testimonialText }}</p>
+
+                <cite itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <strong itemprop="name">{{ block.author }}</strong>
+
+                    {% if block.authorAffiliation %}
+                        <span itemprop="affiliation">{{ block.authorAffiliation }}</span>
+                    {% endif %}
+                </cite>
+            </blockquote>
+        {% endfor %}
+    </div>
+
+    {{ siteMacros.css('css/modules/block-testimonials.css') }}
+</section>

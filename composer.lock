@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9ff11fb6fb2bb4b088c2cfe7b2c97f26",
+    "content-hash": "b02d1e7894c7e4545cfb6846ca9ea876",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -71,6 +71,59 @@
                 "markdown-extra"
             ],
             "time": "2018-03-26T11:24:36+00:00"
+        },
+        {
+            "name": "clubstudioltd/craft-asset-rev",
+            "version": "6.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/clubstudioltd/craft-asset-rev.git",
+                "reference": "b4d4ada7902af654ceb081103ab4f5abb6a7e19c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/clubstudioltd/craft-asset-rev/zipball/b4d4ada7902af654ceb081103ab4f5abb6a7e19c",
+                "reference": "b4d4ada7902af654ceb081103ab4f5abb6a7e19c",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://repo.repman.io/dists/%package%/%version%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-beta.29"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "phpunit/php-token-stream": "<2",
+                "phpunit/phpunit": "~5.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Asset Rev",
+                "handle": "assetrev",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://github.com/clubstudioltd/craft-asset-rev/blob/master/CHANGELOG.md",
+                "documentationUrl": "https://github.com/clubstudioltd/craft-asset-rev",
+                "downloadUrl": "https://github.com/clubstudioltd/craft-asset-rev/archive/v6.zip",
+                "developer": "Club Studio Ltd",
+                "developerUrl": "https://clubstudio.co.uk",
+                "class": "club\\assetrev\\AssetRev"
+            },
+            "autoload": {
+                "psr-4": {
+                    "club\\assetrev\\": "src/"
+                }
+            },
+            "notification-url": "https://repo.repman.io/downloads",
+            "license": [
+                "MIT"
+            ],
+            "description": "A plugin to aid cache-busting in Craft 3",
+            "time": "2018-11-20T14:45:15+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -771,6 +824,63 @@
             "time": "2015-01-27T10:53:51+00:00"
         },
         {
+            "name": "davechild/textstatistics",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DaveChild/Text-Statistics.git",
+                "reference": "dd16252a5c78fad6f8ea4fcd7e55d14fd07b1382"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DaveChild/Text-Statistics/zipball/dd16252a5c78fad6f8ea4fcd7e55d14fd07b1382",
+                "reference": "dd16252a5c78fad6f8ea4fcd7e55d14fd07b1382",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://repo.repman.io/dists/%package%/%version%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.2.*"
+            },
+            "suggest": {
+                "ext-bcmath": "More accurate floating point calculations.",
+                "ext-mbstring": "Handle multi-byte text properly."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "DaveChild\\TextStatistics": "src"
+                }
+            },
+            "notification-url": "https://repo.repman.io/downloads",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Dave Child",
+                    "email": "dave@addedbytes.com",
+                    "homepage": "https://www.addedbytes.com/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP package to measure the readability of text according to various algorithms.",
+            "homepage": "https://github.com/DaveChild/Text-Statistics",
+            "time": "2018-06-19T09:25:42+00:00"
+        },
+        {
             "name": "defuse/php-encryption",
             "version": "v2.2.1",
             "source": {
@@ -1061,6 +1171,111 @@
             "time": "2020-01-20T01:34:17+00:00"
         },
         {
+            "name": "erusev/parsedown",
+            "version": "1.7.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/erusev/parsedown.git",
+                "reference": "cb17b6477dfff935958ba01325f2e8a2bfa6dab3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/cb17b6477dfff935958ba01325f2e8a2bfa6dab3",
+                "reference": "cb17b6477dfff935958ba01325f2e8a2bfa6dab3",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://repo.repman.io/dists/%package%/%version%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Parsedown": ""
+                }
+            },
+            "notification-url": "https://repo.repman.io/downloads",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Emanuil Rusev",
+                    "email": "hello@erusev.com",
+                    "homepage": "http://erusev.com"
+                }
+            ],
+            "description": "Parser for Markdown.",
+            "homepage": "http://parsedown.org",
+            "keywords": [
+                "markdown",
+                "parser"
+            ],
+            "time": "2019-12-30T22:54:17+00:00"
+        },
+        {
+            "name": "erusev/parsedown-extra",
+            "version": "0.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/erusev/parsedown-extra.git",
+                "reference": "91ac3ff98f0cea243bdccc688df43810f044dcef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/erusev/parsedown-extra/zipball/91ac3ff98f0cea243bdccc688df43810f044dcef",
+                "reference": "91ac3ff98f0cea243bdccc688df43810f044dcef",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://repo.repman.io/dists/%package%/%version%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "erusev/parsedown": "^1.7.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "ParsedownExtra": ""
+                }
+            },
+            "notification-url": "https://repo.repman.io/downloads",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Emanuil Rusev",
+                    "email": "hello@erusev.com",
+                    "homepage": "http://erusev.com"
+                }
+            ],
+            "description": "An extension of Parsedown that adds support for Markdown Extra.",
+            "homepage": "https://github.com/erusev/parsedown-extra",
+            "keywords": [
+                "markdown",
+                "markdown extra",
+                "parsedown",
+                "parser"
+            ],
+            "time": "2019-12-30T23:20:37+00:00"
+        },
+        {
             "name": "ezyang/htmlpurifier",
             "version": "v4.13.0",
             "source": {
@@ -1322,6 +1537,64 @@
                 "url"
             ],
             "time": "2020-09-30T07:37:11+00:00"
+        },
+        {
+            "name": "icanboogie/inflector",
+            "version": "v1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ICanBoogie/Inflector.git",
+                "reference": "fb6ca7977f8a7ebb46aff0183ee868d798f77ab8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ICanBoogie/Inflector/zipball/fb6ca7977f8a7ebb46aff0183ee868d798f77ab8",
+                "reference": "fb6ca7977f8a7ebb46aff0183ee868d798f77ab8",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://repo.repman.io/dists/%package%/%version%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.3.4"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "lib/"
+                ],
+                "files": [
+                    "lib/helpers.php"
+                ]
+            },
+            "notification-url": "https://repo.repman.io/downloads",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Olivier Laviale",
+                    "email": "olivier.laviale@gmail.com",
+                    "homepage": "http://www.weirdog.com/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Multilingual inflector that transforms words from singular to plural, underscore to camel case, and more.",
+            "homepage": "http://icanboogie.org/",
+            "keywords": [
+                "camelize",
+                "hyphenate",
+                "inflect",
+                "multilingual",
+                "pluralize",
+                "singularize",
+                "underscore"
+            ],
+            "time": "2019-05-21T19:05:31+00:00"
         },
         {
             "name": "intervention/httpauth",
@@ -1935,6 +2208,77 @@
             "time": "2020-01-19T19:18:49+00:00"
         },
         {
+            "name": "masterminds/html5",
+            "version": "2.7.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Masterminds/html5-php.git",
+                "reference": "9227822783c75406cfe400984b2f095cdf03d417"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Masterminds/html5-php/zipball/9227822783c75406cfe400984b2f095cdf03d417",
+                "reference": "9227822783c75406cfe400984b2f095cdf03d417",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://repo.repman.io/dists/%package%/%version%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "ext-ctype": "*",
+                "ext-dom": "*",
+                "ext-libxml": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Masterminds\\": "src"
+                }
+            },
+            "notification-url": "https://repo.repman.io/downloads",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matt Butcher",
+                    "email": "technosophos@gmail.com"
+                },
+                {
+                    "name": "Matt Farina",
+                    "email": "matt@mattfarina.com"
+                },
+                {
+                    "name": "Asmir Mustafic",
+                    "email": "goetas@gmail.com"
+                }
+            ],
+            "description": "An HTML5 parser and serializer.",
+            "homepage": "http://masterminds.github.io/html5-php",
+            "keywords": [
+                "HTML5",
+                "dom",
+                "html",
+                "parser",
+                "querypath",
+                "serializer",
+                "xml"
+            ],
+            "time": "2020-10-01T13:52:52+00:00"
+        },
+        {
             "name": "mikehaertl/php-shellcommand",
             "version": "1.6.2",
             "source": {
@@ -1981,6 +2325,52 @@
                 "shell"
             ],
             "time": "2020-08-30T09:56:40+00:00"
+        },
+        {
+            "name": "mofodojodino/profanity-filter",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mofodojodino/ProfanityFilter.git",
+                "reference": "529d24adcdb5b9507a4622db6aba6e54c5bb82a9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mofodojodino/ProfanityFilter/zipball/529d24adcdb5b9507a4622db6aba6e54c5bb82a9",
+                "reference": "529d24adcdb5b9507a4622db6aba6e54c5bb82a9",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://repo.repman.io/dists/%package%/%version%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.0",
+                "phpunit/phpunit": "~4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "": "src"
+                }
+            },
+            "notification-url": "https://repo.repman.io/downloads",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dean Tedesco",
+                    "email": "dino@tedesco.net.au"
+                }
+            ],
+            "description": "Filters out profanities from strings.",
+            "time": "2016-05-11T00:19:07+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -2256,6 +2646,75 @@
                 "di container"
             ],
             "time": "2019-11-26T17:56:10+00:00"
+        },
+        {
+            "name": "mundschenk-at/php-typography",
+            "version": "v6.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mundschenk-at/php-typography.git",
+                "reference": "67af39c936751f96a959b9bf211044512675283c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mundschenk-at/php-typography/zipball/67af39c936751f96a959b9bf211044512675283c",
+                "reference": "67af39c936751f96a959b9bf211044512675283c",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://repo.repman.io/dists/%package%/%version%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "ext-pcre": "*",
+                "masterminds/html5": "^2.5.0",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "brain/monkey": "^2.2.0",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.6",
+                "ext-curl": "*",
+                "mundschenk-at/phpunit-cross-version": "dev-master",
+                "phpbench/phpbench": "^0.17||^1.0@dev",
+                "phpcompatibility/php-compatibility": "^9.0",
+                "phpstan/phpstan": "^0.12",
+                "phpunit/phpunit": "5.*||6.*||7.*|8.*|9.*",
+                "squizlabs/php_codesniffer": "^3",
+                "wp-coding-standards/wpcs": "^2.0"
+            },
+            "bin": [
+                "src/bin/update-patterns.php",
+                "src/bin/update-iana.php"
+            ],
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://repo.repman.io/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Peter Putzer",
+                    "email": "github@mundschenk.at",
+                    "homepage": "https://code.mundschenk.at",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Jeffrey D. King",
+                    "email": "jeff.king@weathersource.com",
+                    "homepage": "http://kingdesk.com",
+                    "role": "Original author"
+                }
+            ],
+            "description": "A PHP library for improving your web typography",
+            "time": "2020-04-05T12:14:12+00:00"
         },
         {
             "name": "opis/closure",
@@ -4274,6 +4733,68 @@
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
             "time": "2017-07-23T12:43:26+00:00"
+        },
+        {
+            "name": "topshelfcraft/wordsmith",
+            "version": "3.3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TopShelfCraft/Wordsmith.git",
+                "reference": "e7acf27cc33e7fef8d53ab8af2d0ff498c424e67"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TopShelfCraft/Wordsmith/zipball/e7acf27cc33e7fef8d53ab8af2d0ff498c424e67",
+                "reference": "e7acf27cc33e7fef8d53ab8af2d0ff498c424e67",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://repo.repman.io/dists/%package%/%version%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "craftcms/cms": "^3.3",
+                "davechild/textstatistics": "^1.0",
+                "erusev/parsedown-extra": "^0.8",
+                "icanboogie/inflector": "^1.4",
+                "mofodojodino/profanity-filter": "^1.3",
+                "mundschenk-at/php-typography": "^6.0",
+                "voku/stringy": "^5.1||^6.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Wordsmith",
+                "handle": "wordsmith",
+                "schemaVersion": "0.0.0.0",
+                "changelogUrl": "https://raw.githubusercontent.com/topshelfcraft/wordsmith/master/CHANGELOG.md",
+                "class": "topshelfcraft\\wordsmith\\Wordsmith"
+            },
+            "autoload": {
+                "psr-4": {
+                    "topshelfcraft\\wordsmith\\": "src/"
+                }
+            },
+            "notification-url": "https://repo.repman.io/downloads",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Rog",
+                    "homepage": "https://topshelfcraft.com"
+                }
+            ],
+            "description": "...because you have the best words.",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "wordsmith"
+            ],
+            "time": "2020-08-07T17:42:22+00:00"
         },
         {
             "name": "true/punycode",

@@ -1,0 +1,57 @@
+{
+    "name": "barayamal-design",
+    "version": "1.0.0",
+    "description": "A modular design library built on Craft CMS for Barayamal.",
+    "author": "Cameron Morgan <hello@cameron-morgan.com>",
+    "license": "UNLICENSED",
+    "private": true,
+    "paths": {
+        "src": {
+            "css": "./web/src/css/**/*.scss",
+            "woff": "./web/src/woff/*.+(woff|woff2|ttf)",
+            "js": "./web/src/js/**/*.+(js|mjs)",
+            "img": "./web/src/img/*.+(png|jpg|jpeg|gif|svg)",
+            "twig": "./templates/**/*.twig"
+        },
+        "dist": {
+            "base": "./web/dist",
+            "css": "./web/dist/css",
+            "js": "./web/dist/js",
+            "woff": "./web/dist/woff/",
+            "img": "./web/dist/img/"
+        },
+        "urls": {
+            "live": "https://barayamal.com.au/",
+            "dev": "https://barayamal-design.local/"
+        }
+    },
+    "browserslist": [
+        "defaults"
+    ],
+    "dependencies": {
+        "vanilla-lazyload": "^12.5.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.8.7",
+        "@rollup/plugin-commonjs": "^11.0.2",
+        "@rollup/plugin-node-resolve": "^6.1.0",
+        "del": "^5.1.0",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^7.0.1",
+        "gulp-better-rollup": "^4.0.1",
+        "gulp-cache": "^1.1.3",
+        "gulp-imagemin": "^6.2.0",
+        "gulp-load-plugins": "^2.0.1",
+        "gulp-sass": "^4.0.2",
+        "gulp-sourcemaps": "^2.6.5",
+        "rollup": "^1.32.1"
+    },
+    "scripts": {
+        "build": "gulp build",
+        "dev": "gulp"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Barayamal/barayamal-design.git"
+    }
+}

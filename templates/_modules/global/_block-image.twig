@@ -1,0 +1,10 @@
+{% import '_includes/_macros' as siteMacros %}
+
+<figure itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+	{% include '_includes/srcset.twig' with {
+    	image_url: 'https://picsum.photos/1920/1080',
+    	image_alt: 'Hello World'
+	} %}
+
+	<figcaption itemprop="caption">An example image caption.</figcaption>
+</figure>

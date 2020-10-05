@@ -1,0 +1,4 @@
+{# Outputs the stylesheet HTML tag #}
+{% macro css(stylesheet) %}
+    <link rel="stylesheet" href="{{ rev(stylesheet) }}">
+{% endmacro %}

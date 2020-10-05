@@ -1,0 +1,48 @@
+{% import '_includes/_macros' as siteMacros %}
+
+{# Information Blocks Module #}
+<section class="module bg--grey">
+    <div class="wrapper">
+        <h2 class="t-xl t-centre">{{ block.moduleHeader }}</h2>
+
+        <div class="info-blocks">
+            {% for block in block.informationBlock.all() %}
+
+                {% set blockRed = block.blockColor.getRed() %}
+                {% set blockGreen = block.blockColor.getGreen() %}
+                {% set blockBlue = block.blockColor.getBlue() %}
+                {% set gradientColor =  blockRed ~ ',' ~ blockGreen ~ ',' ~ blockBlue ~ ',0.8' %}
+                {% set gradientStyle = 'background: linear-gradient(0deg, rgba(' ~ gradientColor ~ '), rgba(' ~ gradientColor ~ '))' %}
+
+                {% if block.blockImage %}
+                    {% for image in block.blockImage.all() %}
+                        {% set gradientStyle = gradientStyle ~ ", url('" ~ image.url ~ "')" %}
+                    {% endfor %}
+                {% endif %}
+
+                {% set gradientStyle = gradientStyle ~ ' center center no-repeat;' %}
+
+                <div class="info-block" style="{{ gradientStyle }}">
+                    <h3 class="t-xxl">
+                        {# if icon %}
+                            
+                        {% else #}
+                            {{ block.blockHeader }}
+                        {# endif #}
+                    </h3>
+
+                    <span class="t-md">{{ block.blockText }}</span>
+                </div>
+
+            {% endfor %}
+        </div>
+
+        <div class="module-links">
+            {% for button in block.buttons.all() %}
+                <a class="btn btn--round btn--line" href="{{ button.buttonUrl }}">{{ button.buttonText }}</a>
+            {% endfor %}
+        </div>
+    </div>
+
+    {{ siteMacros.css('css/modules/block-infoblocks.css') }}
+</section>

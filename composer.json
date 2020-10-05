@@ -16,8 +16,10 @@
       { "packagist": false }
     ],
     "require": {
-      "craftcms/cms": "^3.5.10",
-      "vlucas/phpdotenv": "^3.4.0"
+        "clubstudioltd/craft-asset-rev": "6.0.2",
+        "craftcms/cms": "^3.5.10",
+        "topshelfcraft/wordsmith": "3.3.0.1",
+        "vlucas/phpdotenv": "^3.4.0"
     },
     "require-dev": {
       "yiisoft/yii2-shell": "^2.0.3"

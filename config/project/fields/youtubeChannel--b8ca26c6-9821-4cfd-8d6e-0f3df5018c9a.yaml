@@ -1,0 +1,12 @@
+contentColumnType: string(255)
+fieldGroup: 2d9f761f-8cb5-4e4b-bb93-e87bc8e96fbd
+handle: youtubeChannel
+instructions: ''
+name: 'YouTube Channel'
+searchable: false
+settings:
+  maxLength: '255'
+  placeholder: 'https://www.youtube.com/channel/UCAqdQVlfWdiT71O_D6NdHiw'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

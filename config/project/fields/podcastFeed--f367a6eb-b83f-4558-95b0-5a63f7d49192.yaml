@@ -1,0 +1,12 @@
+contentColumnType: string(255)
+fieldGroup: 2d9f761f-8cb5-4e4b-bb93-e87bc8e96fbd
+handle: podcastFeed
+instructions: 'RSS feed for podcast. Included in the site''s code for SEO discoverability'
+name: 'Podcast Feed'
+searchable: false
+settings:
+  maxLength: '255'
+  placeholder: 'https://barayamal.com.au/feed/podcast'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: a6b0a29b-fbfa-4071-a468-1682450ea273
+handle: addressCountry
+instructions: ''
+name: 'Address Country'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: Australia
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

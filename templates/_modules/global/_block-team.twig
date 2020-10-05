@@ -1,0 +1,82 @@
+{% import '_includes/_macros' as siteMacros %}
+
+{# Team Module #}
+<section class="module" data-module="team">
+    <div class="team">  
+
+        {% for i in 0..2 %}
+            <article class="team__member" itemscope itemtype="https://schema.org/Person">
+                <div class="team__member--summary">
+                    <div class="team-container">
+                        {% include '_includes/srcset.twig' with {
+                            image_class: 'team-photo',
+                            image_url: 'https://picsum.photos/800/800',
+                            image_alt: 'Hello World'
+                        } %}
+
+                        <h3 class="t-md">Jane Citizen</h3>
+                        <span class="t-nm" itemprop="jobTitle">Job Title</span>,
+                        <span class="t-nm" itemprop="memberOf">Barayamal</span>
+
+                        <div class="about-btn">
+                            <button class="btn btn--icon" onclick="showTeam('team-{{ loop.index }}')">
+                                <span class="text">About</span>
+
+                                <svg class="gly">
+                                    <use xlink:href="/dist/img/glyphs.svg#arrows"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team__member--bio" id="team-{{ loop.index }}">
+                    <div class="team-container">
+                        <div class="bio-controls">
+                            <span class="name t-sm">About Jane</span>
+
+                            <button class="btn btn--close" onclick="closeTeam('team-{{ loop.index }}')">
+                                <span class="sr-only">Close</span>
+
+                                <svg class="gly">
+                                    <use xlink:href="/dist/img/glyphs.svg#close"/>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <p class="bio t-nm" itemprop="disambiguatingDescription">{{ 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' | typogrify }}</p>
+
+                        <ul class="social">
+                            <li class="social__link">
+                                <a href="#" target="_blank" rel="noopener" title="LinkedIn">
+                                    <svg class="gly gly--team">
+                                        <use xlink:href="/dist/img/glyphs.svg#linkedin"/>
+                                    </svg>
+                                </a>
+                            </li>
+
+                            <li class="social__link">
+                                <a href="#" target="_blank" rel="noopener" title="Twitter">
+                                    <svg class="gly gly--team">
+                                        <use xlink:href="/dist/img/glyphs.svg#twitter"/>
+                                    </svg>
+                                </a>
+                            </li>
+
+                            <li class="social__link">
+                                <a href="mailto: " target="_blank" rel="noopener" title="Email">
+                                    <svg class="gly gly--team">
+                                        <use xlink:href="/dist/img/glyphs.svg#email"/>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        {% endfor %}
+
+    </div>
+
+    {{ siteMacros.css('css/modules/block-team.css') }}
+</section>

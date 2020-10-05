@@ -1,0 +1,20 @@
+{% import '_includes/_macros' as siteMacros %}
+
+{# Tease Module #}
+<section class="module tease">
+    <div class="tease__title">
+        <div class="wrapper">
+            <h2 class="t-lg">{{ block.teaseTitle }}</h2>
+        </div>
+    </div>
+
+    <div class="tease__body">
+        <div class="wrapper">
+            <p>{{ block.teaseBody }}</p>
+
+            <a class="btn" href="{{ block.linkUrl }}">{{ block.linkText }}</a>
+        </div>
+    </div>
+
+    {{ siteMacros.css('css/modules/block-tease.css') }}
+</section>

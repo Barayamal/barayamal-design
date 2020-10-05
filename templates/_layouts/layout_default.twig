@@ -1,0 +1,93 @@
+{% extends '_base/html' %}
+
+{% block layout %}
+
+    <div id="fb-root"></div>
+
+    <nav class="skip-links">
+        <a href="#main">Skip to content</a>
+        <a href="#js-navToggle">Skip to main navigation</a>
+    </nav>
+
+    <header class="header">
+        <div class="wrapper">
+            <div class="header__logo">
+                <a href="{{ siteUrl }}">
+                    {% if craft.app.request.absoluteUrl == siteUrl %}
+                        <h1 class="sr-only">Barayamal</h1>
+                    {% endif %}
+
+                    <img class="logo-img" src="/dist/img/barayamal-logo.svg" alt="Barayamal Logo">
+                </a>
+            </div>
+
+            <div class="header__nav">
+                <div class="top-links">
+                    {% include '_includes/social-links.twig' %}
+
+                    <div class="enquire-btn">
+                        <a class="btn btn--round btn--icon btn--line" href="#">
+                            <svg class="gly">
+                                <use xlink:href="/dist/img/glyphs.svg#email"/>
+                            </svg>
+                            <span class="text">Enquiries</span>
+                        </a>
+                    </div>
+                </div>
+
+                <nav class="main-nav" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                    <button id="js-navToggle" class="btn--nav" title="Open Menu">
+                        Menu
+                    </button>
+
+                    <ul id="js-navMenu" class="nav">
+                        {% for i in 0..3 %}
+                            <li class="nav__item t-md">
+                                <a class="nav__link" href="#" itemprop="url">Page Title</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+        
+    <main id="main" class="main">
+        {% block content %}
+            <p><code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> is not set.</p>
+            <p>More information on Twig's <a href="https://symfony.com/doc/3.4/templating/inheritance.html">docs</a>.</p>
+        {% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="footer-cta {{ craft.app.request.absoluteUrl == siteUrl ? 'footer-cta--ash' }}">
+            <div class="wrapper">
+                <h2 class="t3">{{ siteSettings.callToAction }}</h2>
+                {% include '_includes/mc-subscribe.twig' %}
+            </div>
+        </div>
+        <div class="footer-info">
+            <div class="wrapper">
+                <div class="footer-info__address">
+                    <address class="t-nm t-700" itemscope itemtype="https://schema.org/PostalAddress">
+                        <span itemprop="streetAddress">{{ siteSettings.streetAddress }}</span>,
+                        <span itemprop="addressLocality">{{ siteSettings.addressLocality }}</span>,
+                        <span itemprop="addressRegion">{{ siteSettings.addressRegion }}</span>,
+                        <span itemprop="addressCountry">{{ siteSettings.addressCountry }}</span>
+                    </address>
+
+                    <p class="traditional-owners t-nm">{{ siteSettings.acknowledgementCountry }}</p>
+                </div>
+                <div class="footer-info__social">
+                    {% include '_includes/social-links.twig' %}
+                </div>
+            </div>
+        </div>
+        <div class="footer-colophon">
+            <div class="wrapper">
+                <span class="t-nm">&copy; Barayamal {{ "now"|date('Y') }}</span>
+            </div>
+        </div>
+    </footer>
+
+{% endblock layout %}

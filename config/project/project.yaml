@@ -1,8 +1,17 @@
-dateModified: 1601891281
+dateModified: 1601893522
 email:
   fromEmail: d.foley@barayamal.com
   fromName: Barayamal
   transportType: craft\mail\transportadapters\Sendmail
+plugins:
+  assetrev:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  wordsmith:
+    edition: standard
+    enabled: true
+    schemaVersion: 0.0.0.0
 system:
   edition: solo
   live: true

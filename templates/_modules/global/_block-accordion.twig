@@ -1,0 +1,41 @@
+{% import '_includes/_macros' as siteMacros %}
+
+{% set states = [
+    'Federal',
+    'New South Wales',
+    'Queensland',
+    'South Australia',
+    'Tasmania',
+    'Victoria',
+    'Western Australia',
+    'Australian Capital Territory',
+    'Northern Territory',
+] %}
+
+{# Accordion Module #}
+<section class="module" data-module="accordion">
+    <div class="accordion full-width">
+        <div class="accordion__menu">
+            <ul class="nav">
+                {% for state in states %}
+                    <li class="nav__item"><button class="btn btn--accordion t-md">{{ state }}</button></li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="accordion__content">
+            {% for state in states %}
+                <div class="accordion-container" id="accordion-{{ loop.index }}">
+                    <fieldset class="sr-only">
+                        <label for "accordion-{{ loop.index }}">{{ state }}</label>
+                    </fieldset>
+
+                    <h4 class="t-ul t-nm">Brisbane City Council</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    {{ siteMacros.css('css/modules/block-accordion.css') }}
+</section>

@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: a6b0a29b-fbfa-4071-a468-1682450ea273
+handle: acknowledgementCountry
+instructions: ''
+name: 'Acknowledgement of Country'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: '1'
+  placeholder: ''
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText
