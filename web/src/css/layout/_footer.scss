@@ -1,0 +1,53 @@
+/*------------------------------------*\
+  # SITE FOOTER
+\*------------------------------------*/
+
+.footer-cta {
+    padding: ($rhythm * 3) 0 ($rhythm * 3);
+    text-align: center;
+}
+
+.footer-cta--ash {
+    background-color: site-color('ash');
+    color: site-color('white');
+}
+
+.footer-info {
+    background-color: site-color('slate');
+    color: site-color('white');
+
+    /* Reverse outline and fill for readability */
+    .gly {
+        fill: site-color('white');
+        outline: site-color('white');
+    }
+
+    @include for-size('tablet') {
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+.footer-info__address {
+    @include for-size('tablet') {
+        max-width: 80%;
+        padding-right: $rhythm;
+    }
+}
+
+.footer-info__social {
+    margin-left: auto;
+}
+
+/* Vertical rhythm appears broken due to <address> 
+   not being treated as a paragraph. */
+.traditional-owners {
+    margin-top: $rhythm;
+}
+
+.footer-colophon {
+    background-color: site-color('black');
+    color: site-color('white');
+}

@@ -1,0 +1,59 @@
+/*------------------------------------*\
+  # BUTTONS
+\*------------------------------------*/
+
+.btn {
+    @include reset-btn;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.btn--round {
+    border: none;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+
+    &:active {
+        position: relative;
+        top: 1px;
+    }
+}
+
+.btn--icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .text {
+        padding: 0 0.5rem 0 0.5rem;
+    }
+}
+
+.btn--line {
+    border: 3px solid var(--site__txt-color);
+    color: var(--site__txt-color);
+}
+
+.btn--ochre {
+    background-color: site-color('ochre');
+    color: site-color('black');
+
+    &:hover,
+    &:active {
+        background-color: site-color('black');
+        color: site-color('white');
+    }
+}
+
+.btn--earth {
+    background-color: site-color('earth');
+    color: site-color('black');
+
+    &:hover,
+    &:active {
+        background-color: site-color('black');
+        color: site-color('white');
+    }
+}

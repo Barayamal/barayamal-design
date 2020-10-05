@@ -1,0 +1,56 @@
+/*------------------------------------*\
+  # TYPOGRAPHY
+\*------------------------------------*/
+
+body {
+    font-family: $font-family;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "liga" 1;
+
+    @supports (font-variant-ligatures: discretionary-ligatures) {
+        font-feature-settings: normal;
+        font-variant-ligatures: discretionary-ligatures;
+    }
+
+    // Massive thanks to CSS Tricks for this!
+    @include fluid-type($min-width, $max-width, $base_font-size, $max_font-size);
+}
+
+/* Override UA to semi-bold */
+h1, h2, h3, h4, h5, h6, strong {
+    font-weight: 700;
+}
+
+/* Typography classes for user-controlled content (i.e. blogs) */
+.t-user {
+    a {
+        @extend %nicer-highlight;
+
+        &:hover,
+        &:active {
+            background: var(--site__txt-color);
+            color: var(--site__bg-color);
+        }
+
+        &:visited {
+            font-style: italic;
+        }
+    }
+}
+
+/* Vertical Rhythm */
+h1, h2, h3, h4, h5, h6, p {
+     margin-bottom: $rhythm;
+}
+
+/* `font-size` helper classes */
+.t-400         { font-weight: 400; font-variation-settings: 'wght' 400; }
+.t-700         { font-weight: 700; font-variation-settings: 'wght' 700; }
+.t-ul          { border-bottom: 1px solid site-color('ash'); }
+.t-centre      { text-align: center; }
+small,  .t-sm  { @include type-setting('sm'); }
+p,      .t-nm  { @include type-setting('nm'); }
+h4,     .t-md  { @include type-setting('md'); }
+h3,     .t-lg  { @include type-setting('lg'); }
+h2,     .t-xl  { @include type-setting('xl'); }
+h1,     .t-xxl { @include type-setting('xxl'); }

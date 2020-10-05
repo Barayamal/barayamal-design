@@ -1,0 +1,36 @@
+/*------------------------------------*\
+  # RESETS
+\*------------------------------------*/
+
+@mixin reset-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin reset-btn {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    background: transparent;
+    font-size: type-scale('nm');
+}
+
+@mixin reset-input {
+    margin: 0;
+    border: 0;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+    background: none;
+}
+
+@mixin override-user {
+    a {
+        background: none !important;
+        border-radius: 0 !important;
+        padding-left: 0 !important;
+        outline: none; // always replace with a style for a11y!
+    }
+}

@@ -1,0 +1,61 @@
+@import '../utils/variables',
+        '../utils/mixins',
+        '../utils/resets',
+        '../utils/placeholders';
+
+/*------------------------------------*\
+  # POST
+\*------------------------------------*/
+
+/* About Author */
+.author-details {
+    background-color: site-color('grey');
+    text-align: center;
+    padding: $rhythm; /* beautiful white-space */
+
+    p {
+        margin-bottom: 0; /* override global */
+    }
+
+    @include for-size('tablet') {
+        display: flex;
+        text-align: left; /* override mobile */
+    }
+}
+
+.author-links {
+    @include for-size('tablet') {
+        display: flex;
+    }
+}
+
+.author-name {
+    small {
+        display: block;
+    }
+}
+
+.author-details__img {
+    img {
+        border-radius: 50%;
+        width: 10rem;
+    }
+
+    @include for-size('tablet') {
+        margin-right: $rhythm;
+    }
+}
+
+.author-social {
+    a {
+        text-decoration: none; /* override global */
+    }
+
+    .gly {
+        fill: site-color('sea');
+    }
+
+    @include for-size('tablet') {
+        margin-left: $rhythm;
+    }
+}

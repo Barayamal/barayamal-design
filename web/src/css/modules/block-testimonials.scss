@@ -1,0 +1,27 @@
+@import '../utils/variables',
+        '../utils/mixins',
+        '../utils/resets',
+        '../utils/placeholders';
+
+@import 'flickity/css/flickity';
+
+/*------------------------------------*\
+  # TESTIMONIALS
+\*------------------------------------*/
+
+.testimonials {
+    @include for-size('tablet') {
+        max-width: $inner_content-width;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.testimonial-entry {
+    width: 100%; /* ¯\_(ツ)_/¯ */
+    padding: 0 ($rhythm * 3) 0 ($rhythm * 3);
+
+    span {
+        display: block;
+    }
+}

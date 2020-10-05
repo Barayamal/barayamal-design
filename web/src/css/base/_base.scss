@@ -1,0 +1,83 @@
+/*------------------------------------*\
+  # BASE
+\*------------------------------------*/
+
+:root {
+    --site__bg-color: #{site-color('white')};
+    --site__txt-color: #{site-color('black')};
+    --site__select-color: #{site-color('earth')};
+    --site__outline: #{site-color('black')} dotted medium;
+}
+
+/*@media (prefers-color-scheme: dark) {
+  TO BE BUILT.
+}*/
+
+::selection {
+    @extend %nicer-highlight;
+    color: site-color('white');
+}
+
+body {
+    background-color: var(--site__bg-color);
+    color: var(--site__txt-color);
+
+    @if $text-dir == ltr {
+        direction: ltr;
+    } @else {
+        direction: rtl;
+    }
+}
+
+.wrapper {
+    padding: $base_font-size;
+
+    @include for-size('tablet') {
+        max-width: $base_content-width;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Page Layouts */
+.page-with-sidebar {
+    @include for-size('laptop') {
+        display: flex;
+    }
+}
+
+/* Used in conjunction with .wrapper to restrict
+   the type measure in article, and page-like templates. */
+.page-container {
+    @include for-size('laptop') {
+        max-width: $measure_content-width;
+    }
+}
+
+.sidebar-container {
+    @include for-size('laptop') {
+        width: $sidebar_content-width;
+    }
+}
+
+/* Utility Classes */
+.module {
+    padding: $rhythm 0 $rhythm 0;
+}
+
+.bg--grey {
+    background-color: site-color('grey');
+}
+
+.gly {
+    display: inline-block;
+    width: type-scale('md');
+    height: type-scale('md');
+}
+
+.media {
+    img,
+    video {
+        object-fit: cover;
+    }
+}

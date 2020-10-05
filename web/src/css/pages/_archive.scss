@@ -1,0 +1,79 @@
+/*------------------------------------*\
+  # ARCHIVE
+\*------------------------------------*/
+
+/* Categories */
+.category {
+    @extend #category-label;
+}
+
+.category--ochre {
+    background-color: site-color('ochre');
+    color: site-color('white');
+}
+
+/* Feature Blocks */
+.promo {
+    @include for-size('tablet') {
+        display: flex;
+
+        /* Set a tighter wrapper for blocks to sit in. */
+        max-width: $inner_content-width;
+        margin-left: auto;
+        margin-right: auto;
+
+        > .promo__block {
+            margin-right: $rhythm;
+        }
+    }
+}
+
+.promo__block {
+    width: 100%;
+    margin-top: $rhythm; /* space between blocks on mobile */
+
+    @include for-size('tablet') {
+        width: 50%;
+    }
+
+    .btn {
+        margin-top: $rhythm / 2;
+    }
+
+    .text {
+        text-align: right;
+    }
+}
+
+.latest-item {
+    background-color: site-color('white');
+}
+
+.latest-item__title {
+    position: relative;
+
+    .media {
+        @extend %overlay;
+    }
+
+    .category {
+        position: absolute;
+        top: $rhythm;
+        left: $rhythm;
+    }
+
+    .item-title {
+        position: absolute;
+        left: $rhythm;
+        bottom: 0;
+        color: site-color('white');
+    }
+}
+
+.latest-item__desc {
+    padding: $rhythm;
+
+    p {
+        margin-bottom: 0; /* override global */
+    }
+}

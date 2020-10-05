@@ -1,0 +1,45 @@
+/*------------------------------------*\
+  # A11Y
+\*------------------------------------*/
+
+.sr-only {
+    position: absolute !important;
+
+    @if $text-dir == ltr {
+        left: -999rem;
+    } @else {
+        right: -999rem;
+    }
+}
+
+.skip-links a {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    opacity: 0;
+    padding: 0.5rem;
+    text-decoration: none;
+    pointer-events: none;
+    background-color: var(--site__txt-color);
+    color: var(--site__bg-color);
+
+    @if $text-dir == ltr {
+        left: 0;
+    } @else {
+        right: 0;
+    }
+
+    &:focus {
+        opacity: 1;
+        pointer-events: all;
+        outline: none;
+    }
+}
+
+input,
+input[type=submit],
+a, {
+    &:focus {
+        outline: var(--site__outline);
+    }
+}

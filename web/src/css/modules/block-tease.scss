@@ -1,0 +1,37 @@
+@import '../utils/variables',
+        '../utils/mixins',
+        '../utils/resets',
+        '../utils/placeholders';
+
+/*------------------------------------*\
+  # TEASE
+\*------------------------------------*/
+
+.tease {
+    @include for-size('tablet') {
+        display: flex;
+    }
+}
+
+.tease__title,
+.tease__body {
+    padding: $rhythm; /* glorious white-space. */
+}
+
+.tease__title {
+    background-color: site-color('ochre');
+    color: site-color('white');
+
+    @include for-size('tablet') {
+        flex-basis: 30%;
+    }
+}
+
+.tease__body {
+    background-color: site-color('slate');
+    color: site-color('white');
+
+    .btn {
+        color: site-color('earth');
+    }
+}

@@ -1,0 +1,45 @@
+@import '../utils/variables',
+        '../utils/mixins',
+        '../utils/resets',
+        '../utils/placeholders';
+
+/*------------------------------------*\
+  # ACCORDION
+\*------------------------------------*/
+
+.accordion {
+    @include for-size('tablet') {
+        display: flex;
+        align-content: flex-start;
+    }
+}
+
+.accordion__menu {
+    background-color: site-color('ochre');
+
+    @include for-size('tablet') {
+        width: 300px;
+        flex-shrink: 0;
+    }
+}
+
+.btn--accordion {
+    color: site-color('white');
+    padding: $rhythm / 2;
+
+    .is-active {
+        background-color: site-color('sea') !important;
+    }
+}
+
+.accordion__content {
+    /* provide some breathing room between the menu and border */
+    @include for-size('tablet') {
+        margin-left: 0.5rem;
+    }
+}
+
+.accordion-container {
+    border: 1px solid site-color('ash');
+    padding: 1.5rem;
+}

@@ -1,0 +1,94 @@
+/*------------------------------------*\
+  # HERO IMAGE
+\*------------------------------------*/
+
+/* Image Masks */
+$mask-types: 'page','post','archive','carousel';
+
+@each $mask in $mask-types {
+    .banner--#{$mask} {
+        mask-image: url('../img/mask-#{$mask}.svg');
+        mask-repeat: no-repeat, no-repeat;
+        mask-size: cover;
+    }
+}
+
+.banner--page,
+.banner--post {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+
+    img,
+    video {
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.banner__text {
+    position: absolute;
+    z-index: 7;
+    top: 15%;
+    width: 100%; /* make wrapper full-width */
+    color: site-color('white');
+}
+
+/* Slider */
+@import 'flickity/css/flickity';
+@import 'flickity-fade/flickity-fade';
+
+.banner__slide {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 80vh;
+
+    img,
+    video {
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    @include for-size('tablet') {
+        height: 100vh;
+
+        /* stops things getting out of control 
+           on large viewports*/
+        max-height: 50rem;
+    }
+}
+
+.slide-img,
+.banner-img {
+    @extend %overlay;
+
+    flex: none;
+    width: 100%;
+}
+
+.slide-text {
+    position: absolute;
+    text-align: center;
+    z-index: 7;
+    top: 20%;
+    width: 100%; /* make wrapper full-width */
+    color: site-color('white');
+
+    @include for-size('tablet') {
+        top: 25%;
+        text-align: left;
+    }
+}
+
+.text-contain {
+    @include for-size('tablet') {
+        max-width: 70%;
+    }
+}

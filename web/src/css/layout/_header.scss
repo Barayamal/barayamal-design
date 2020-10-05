@@ -1,0 +1,58 @@
+/*------------------------------------*\
+  # SITE HEADER
+\*------------------------------------*/
+
+.header {
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+}
+
+.header__logo {
+    min-width: 30%;
+}
+
+.header__nav {
+    /* Push to edges to compensate for logo height. */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.top-links {
+    /* Mobile first, remove on smaller viewports. */
+    display: none;
+
+    @include for-size('tablet') {
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    /* Compensate for padding for .enquire-btn */
+    .social {
+        padding: 0 $rhythm;
+    }
+}
+
+.social {
+    @include reset-list;
+}
+
+/* Not included in mixin, for vertical list creation. */
+.social__link {
+    display: inline;
+}
+
+.enquire-btn {
+    border-left: 0.5px solid site-color('ash');
+    padding: 0 0 0 $rhythm;
+}
+
+.logo-img {
+    height: 7rem;
+}

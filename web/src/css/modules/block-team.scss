@@ -1,0 +1,97 @@
+@import '../utils/variables',
+        '../utils/mixins',
+        '../utils/resets',
+        '../utils/placeholders';
+
+/*------------------------------------*\
+  # TEAM BLOCK
+\*------------------------------------*/
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.team__member {
+    position: relative;
+    width: 100%;
+
+    @include for-size('tablet') {
+        /* 'three columns' wide in respect to pages with sidebars.*/
+        width: ($measure_content-width / 2.3);
+        margin: ($rhythm / 2) ($rhythm / 2);
+    }
+}
+
+.team-container {
+    padding: $rhythm * 1.5;
+}
+
+.team__member--summary {
+    background-color: site-color('grey');
+    text-align: center;
+
+    h3 {
+        color: site-color('ochre');
+    }
+}
+
+.team-photo img {
+    border-radius: 50%;
+    height: 8rem;
+}
+
+.about-btn {
+    padding-top: $rhythm;
+    width: 30%;
+    margin-left: 25%;
+    margin-right: 45%; // @hack
+}
+
+.team__member--bio {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: site-color('ochre');
+    opacity: 0.95;
+    color: site-color('white');
+
+    .name {
+        @extend #category-label;
+        background-color: site-color('white');
+        color: site-color('black');
+    }
+
+    .bio {
+        padding-top: $rhythm;
+    }
+
+    .social {
+        @include override-user;
+        border-top: 0.25px solid site-color('grey');
+    }
+
+    .gly {
+        fill: site-color('grey');
+    }
+}
+
+.bio-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gly--team {
+    margin-top: 0.5rem;
+    width: type-scale('nm');
+    height: type-scale('nm');
+}
+
+.is-visible {
+    visibility: visible !important;
+    opacity: 1;
+}

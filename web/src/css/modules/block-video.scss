@@ -1,0 +1,48 @@
+@import '../utils/variables',
+        '../utils/mixins',
+        '../utils/resets',
+        '../utils/placeholders';
+
+/*------------------------------------*\
+  # VIDEO
+\*------------------------------------*/
+
+@import 'glightbox/dist/css/glightbox';
+
+.launch-player {
+    @extend %overlay;
+
+    position: relative;
+
+    img, 
+    video {
+        height: 40vh;
+        width: 100%;
+
+        @include for-size('tablet') {
+            height: 70vh;
+        }
+    }
+}
+
+.play-media {
+
+    /* a11y: button because triggering
+       action on same page. */
+    @include reset-btn;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    /* We should know the height of the button, 
+     but we'll do this to be sure. */
+    transform: translate(-50%, -50%);
+    z-index: 7;
+
+    .gly {
+        width: type-scale('xxl');
+        height: type-scale('xxl');
+        fill: site-color('white');
+    }
+}

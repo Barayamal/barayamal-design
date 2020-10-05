@@ -65,11 +65,6 @@ gulp.task('img', function() {
       .pipe(gulp.dest(pkg.paths.dist.img))
 });
 
-gulp.task('woff', function() {
-    return gulp.src(pkg.paths.src.woff)
-      .pipe(gulp.dest(pkg.paths.dist.woff))
-});
-
 
 
 // TASK RUNNERS
@@ -77,12 +72,10 @@ gulp.task('default', gulp.parallel(
     'sass:development',
     'js:development',
     'img', 
-    'woff',
     'watch')
 );
 
 gulp.task('build', gulp.series(
     'purge',
-    'img',
-    'woff')
+    'img')
 );

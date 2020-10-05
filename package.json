@@ -8,7 +8,6 @@
     "paths": {
         "src": {
             "css": "./web/src/css/**/*.scss",
-            "woff": "./web/src/woff/*.+(woff|woff2|ttf)",
             "js": "./web/src/js/**/*.+(js|mjs)",
             "img": "./web/src/img/*.+(png|jpg|jpeg|gif|svg)",
             "twig": "./templates/**/*.twig"
@@ -17,7 +16,6 @@
             "base": "./web/dist",
             "css": "./web/dist/css",
             "js": "./web/dist/js",
-            "woff": "./web/dist/woff/",
             "img": "./web/dist/img/"
         },
         "urls": {

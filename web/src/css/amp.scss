@@ -1,0 +1,19 @@
+@charset 'utf-8';
+
+$text-dir: ltr !default;
+
+/**
+ * ** IMPORTS STYLES FOR THE AMP PAGES ONLY. **
+ *
+ * Author: Barayamal Limited
+ * Author URI: https://barayamal.com.au/
+ * Description: A Craft CMS site for the Australian charity Barayamal.
+ * Version: 1.0
+ * License: All rights reserved
+ *
+ */
+
+@import 'utils/variables',
+        'utils/mixins',
+        'utils/resets',
+        'utils/placeholders';

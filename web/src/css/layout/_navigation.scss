@@ -1,0 +1,57 @@
+/*------------------------------------*\
+  # NAVIGATION
+\*------------------------------------*/
+
+.nav {
+    @include reset-list;
+}
+
+.btn--nav {
+    @include reset-btn;
+
+    @include for-size('tablet') {
+        display: none;
+    }
+}
+
+.nav__link {
+    text-decoration: none;
+    font-weight: 700;
+
+    &:hover,
+    &:focus {
+
+    }
+}
+
+
+/* Main Navigation */
+.main-nav .nav__item {
+    display: inline;
+}
+
+.main-nav .nav {
+    /* Mobile first, toggle with #js-navToggle */
+    display: none;
+
+    @include for-size('tablet') {
+        display: block;
+
+        // TODO: Convert to SASS Loop
+        li:nth-child(1) > a {
+            color: site-color('ochre');
+        }
+
+        li:nth-child(2) > a {
+            color: site-color('earth');
+        }
+
+        li:nth-child(3) > a {
+            color: site-color('aubergine');
+        }
+
+        li:nth-child(4) > a {
+            color: site-color('sea');
+        }
+    }
+}

@@ -1,0 +1,62 @@
+/*------------------------------------*\
+  # VARIABLES
+\*------------------------------------*/
+
+// TYPOGRAPHY //
+$base_font-size: 16px;
+$max_font-size: 18px;
+$base_line-height: 1.4;
+$min-width: 320px;
+$max-width: 1441px;
+
+$type-scale: (
+    sm:  0.8rem,
+    nm:  1rem,
+    md:  1.25rem,
+    lg:  1.563rem,
+    xl:  1.953rem,
+    xxl: 2.441rem,
+);
+
+$line-heights: (
+    sm:  1,
+    nm:  $base_line-height * 1.125,
+    md:  $base_line-height,
+    lg:  $base_line-height,
+    xl:  $base_line-height,
+    xxl: $base_line-height / 1.25,
+);
+
+$font-family: (
+    'neuzeit-grotesk',
+    'Helvetica',
+    'Arial',
+    sans-serif
+);
+
+// BASE //
+$base_content-width: 80rem;
+$inner_content-width: 60rem;
+$measure_content-width: 70%;
+$sidebar_content-width: 30%;
+$rhythm: $base_font-size * $base_line-height;
+
+$breakpoints: (
+    'phone': 480px,
+    'tablet': 768px,
+    'laptop': 800px,
+    'desktop': 1441px,
+) !default;
+
+// COLOR // 
+$site-colors: (
+    'black':     hsl(0, 0%, 13%),
+    'white':     hsl(0, 0%, 100%),
+    'ochre':     hsl(15, 67%, 48%),
+    'earth':     hsl(34, 87%, 53%),
+    'sea':       hsl(197, 100%, 41%),
+    'slate':     hsl(0, 0%, 27%),
+    'ash':       hsl(180, 0%, 40%),
+    'aubergine': hsl(344, 26%, 28%),
+    'grey':      hsl(180, 7%, 97%)
+);

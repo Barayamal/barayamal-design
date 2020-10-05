@@ -1,0 +1,49 @@
+@charset 'utf-8';
+
+$text-dir: ltr !default;
+
+/**
+ *
+ * Author: Barayamal Limited
+ * Author URI: https://barayamal.com.au/
+ * Description: A Craft CMS site for the Australian charity Barayamal.
+ * Version: 1.0
+ * License: All rights reserved
+ *
+ *
+ * CONTENTS
+ *
+ * UTILS
+ * _variables ........... Site-wide variables for spacing, color etc.
+ * _mixins .............. Self-explanatory, any mixins for the site.
+ * _resets .............. Frequently used resets and extend styles.
+ *
+ * BASE
+ * _reset ............... Resets weird browser styles.
+ * _base ................
+ * _a11y ................ Styles for all site-wide a11y features.
+ * _typography .......... Styles for site-wide typography.
+ * _animations .......... 
+ * 
+ */
+
+@import 'utils/variables',
+        'utils/mixins',
+        'utils/resets',
+        'utils/placeholders';
+
+@import 'base/reset',
+        'base/base',
+        'base/a11y',
+        'base/typography',
+        'base/animations';
+
+@import 'layout/navigation',
+        'layout/header',
+        'layout/footer';
+
+@import 'pages/archive';
+
+@import 'modules/buttons',
+        'modules/forms',
+        'modules/hero-image';

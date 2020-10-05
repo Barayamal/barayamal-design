@@ -1,0 +1,39 @@
+@import '../utils/variables',
+        '../utils/mixins',
+        '../utils/resets',
+        '../utils/placeholders';
+
+/*------------------------------------*\
+  # INFORMATION BLOCKS
+\*------------------------------------*/
+
+.info-block,
+.module-links {
+    text-align: center;
+}
+
+.module-links {
+    margin-top: ($rhythm * 2); /* makes up for button styles */
+}
+
+.info-blocks {
+    @include for-size('tablet') {
+        display: flex;
+
+        /* Set a tighter wrapper for blocks to sit in. */
+        max-width: $inner_content-width;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.info-block {
+    padding: ($rhythm * 2);
+    color: site-color('white');
+
+    .gly {
+        /* In theory, same height as text alternative. */
+        width: type-scale('xxl');
+        height: type-scale('xxl');
+    }
+}
