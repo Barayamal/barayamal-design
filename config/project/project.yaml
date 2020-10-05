@@ -1,0 +1,18 @@
+dateModified: 1601891281
+email:
+  fromEmail: d.foley@barayamal.com
+  fromName: Barayamal
+  transportType: craft\mail\transportadapters\Sendmail
+system:
+  edition: solo
+  live: true
+  name: Barayamal
+  retryDuration: null
+  schemaVersion: 3.5.13
+  timeZone: Australia/Brisbane
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

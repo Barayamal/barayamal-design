@@ -1,0 +1,16 @@
+# Craft CMS
+/.env
+/.idea
+/vendor
+config/license.key
+
+# macOS
+.DS_Store
+
+# Build Tools
+/node_modules
+/web/dist
+/test
+
+# Local by Flywheel
+/sql

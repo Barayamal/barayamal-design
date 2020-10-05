@@ -1,0 +1,9 @@
+baseUrl: $PRIMARY_SITE_URL
+enabled: true
+handle: default
+hasUrls: true
+language: en-AU
+name: Barayamal
+primary: true
+siteGroup: ceb5d8f0-579c-41b2-a21d-1aadfae0bdd7
+sortOrder: 1

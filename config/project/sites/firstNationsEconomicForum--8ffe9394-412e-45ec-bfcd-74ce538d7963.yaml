@@ -1,0 +1,9 @@
+baseUrl: '@web/first-nations'
+enabled: true
+handle: firstNationsEconomicForum
+hasUrls: true
+language: en-AU
+name: 'First Nations'' Economic Forum'
+primary: false
+siteGroup: ceb5d8f0-579c-41b2-a21d-1aadfae0bdd7
+sortOrder: 2
